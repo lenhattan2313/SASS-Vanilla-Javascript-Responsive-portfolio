@@ -1,5 +1,14 @@
-//Smart phone
-@include mediaSm {
+//Widescreen
+@include mediaXl {
+  .projects {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+//desktop and laptop
+@include mediaLg {
+  .projects {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 //tablet and small laptop
 @include mediaMd {
@@ -53,10 +62,25 @@
     grid-template-columns: 1fr;
     grid-row-gap: 20px;
   }
+  .projects {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
-//desktop and laptop
-@include mediaLg {
-}
-//Widescreen
-@include mediaXl {
+
+//Smart phone
+@include mediaSm {
+  main {
+    padding: 2rem;
+    #home h1 {
+      margin-top: 10vh;
+    }
+
+    .lg-heading {
+      margin-top: 1rem;
+      font-size: 5rem;
+    }
+  }
+  .projects {
+    grid-template-columns: 1fr;
+  }
 }
