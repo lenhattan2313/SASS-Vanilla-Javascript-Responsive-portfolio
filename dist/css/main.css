@@ -59,7 +59,7 @@
       background: url(../image/portrait.jpg);
       background-size: cover;
       border-radius: 50%;
-      border: 2px solid #f0f0f0;
+      border: 2px solid #fc4f83;
       width: 200px;
       height: 200px; }
     .menu-branding.show {
@@ -118,8 +118,7 @@ h3 {
   h1.lg-heading,
   h2.lg-heading,
   h3.lg-heading {
-    font-size: 5rem;
-    margin-top: 3rem; }
+    font-size: 5rem; }
   h1.sm-heading,
   h2.sm-heading,
   h3.sm-heading {
@@ -132,6 +131,7 @@ header {
   width: 100%; }
 
 main {
+  min-height: calc(100vh - 50px);
   padding: 3rem; }
   main .icons {
     margin: 1rem; }
@@ -152,3 +152,74 @@ a {
 
 .text-secondary {
   color: #fc4f83; }
+
+.about-info {
+  display: grid;
+  padding-top: 20px;
+  grid-template-areas: "portrait bio bio" "job1 job2 job3";
+  grid-template-columns: repeat(3, 1fr);
+  grid-row-gap: 10px;
+  grid-column-gap: 10px; }
+  .about-info img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    margin: auto;
+    border: 3px solid #fc4f83; }
+  .about-info .job {
+    border-bottom: 3px solid #fc4f83;
+    background: #27384c;
+    padding: 7px; }
+  .about-info .about-img {
+    grid-area: portrait; }
+  .about-info .bio {
+    grid-area: bio; }
+  .about-info .job1 {
+    grid-area: job1; }
+  .about-info .job2 {
+    grid-area: job2; }
+  .about-info .job3 {
+    grid-area: job3; }
+
+footer {
+  text-align: center;
+  background: #27384c;
+  height: 50px;
+  padding: 1rem;
+  font-size: 0.8rem; }
+
+@media screen and (max-width: 760px) {
+  main {
+    font-size: 1.5rem;
+    line-height: 1;
+    align-items: center; }
+    main .lg-heading {
+      margin-bottom: 1.5rem; }
+  .menu-branding,
+  .menu-nav {
+    float: none;
+    min-height: 0;
+    width: 100%; }
+    .menu-branding.show,
+    .menu-nav.show {
+      transform: translate3d(0, 0, 0); }
+  .menu-nav {
+    height: 70vh;
+    transform: translate3d(-100%, 0, 0); }
+    .menu-nav li {
+      font-size: 1.5rem; }
+  .menu-branding {
+    transform: translate3d(100%, 0, 0);
+    height: 30vh; }
+    .menu-branding .portrait {
+      width: 150px;
+      height: 150px; }
+  .nav-item {
+    transform: translate3d(-400px, 0, 0);
+    transition: all 0.4s ease-in-out; }
+    .nav-item.show {
+      transform: translate3d(0, 0, 0); }
+  .about-info {
+    grid-template-areas: "portrait" "bio" "job1" "job2" "job3";
+    grid-template-columns: 1fr;
+    grid-row-gap: 10px; } }

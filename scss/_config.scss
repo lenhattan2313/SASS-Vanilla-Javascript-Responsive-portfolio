@@ -1,9 +1,16 @@
 $primary-color: #364f6b;
 $secondary-color: hsl(342, 97%, 65%);
 $tertiary-color: #f0f0f0;
-
 $background-img: url(../image/landscape.jpg);
 $show-background-img: true;
+
+@function set-text-color($color) {
+  @if (lightness($color) > 40) {
+    @return #000;
+  } @else {
+    @return #f0f0f0;
+  }
+}
 @mixin background {
   @if $show-background-img {
     &#bg-img {
@@ -25,4 +32,25 @@ $show-background-img: true;
 }
 @mixin easeInOut {
   transition: all 0.4s ease-in-out;
+}
+
+@mixin mediaSm {
+  @media screen and (max-width: 500px) {
+    @content;
+  }
+}
+@mixin mediaMd {
+  @media screen and (max-width: 760px) {
+    @content;
+  }
+}
+@mixin mediaLg {
+  @media screen and (max-width: 1170) {
+    @content;
+  }
+}
+@mixin mediaXl {
+  @media screen and (max-width: 1171) {
+    @content;
+  }
 }
