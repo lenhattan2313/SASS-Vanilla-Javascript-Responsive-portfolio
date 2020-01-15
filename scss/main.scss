@@ -151,5 +151,29 @@ footer {
     color: #333;
   }
 }
+//contact
+.contact-info {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin-top: 1rem;
 
+  div {
+    border: 3px $tertiary-color solid;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    @include easeInOut;
+    span {
+      color: $secondary-color;
+    }
+    &:hover {
+      background: $secondary-color;
+      color: set-text-color($secondary-color);
+      padding: 1.5rem;
+      span {
+        color: set-text-color($secondary-color);
+      }
+    }
+  }
+}
 @import "mobile";
