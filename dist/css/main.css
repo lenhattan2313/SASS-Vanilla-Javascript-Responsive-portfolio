@@ -47,13 +47,13 @@
         color: #24b273; }
   .menu-nav {
     transform: translate3d(0, -100%, 0);
-    background: #1f343a;
+    background: #233253;
     transition: all 0.4s ease-in-out; }
     .menu-nav.show {
       transform: translate3d(0, 0, 0); }
   .menu-branding {
     transform: translate3d(0, 100%, 0);
-    background: #223a41;
+    background: #26365a;
     transition: all 0.4s ease-in-out; }
     .menu-branding .portrait {
       background: url(../image/portrait.jpg);
@@ -91,7 +91,7 @@
   box-sizing: border-box; }
 
 body {
-  background: #243d44;
+  background: #28385e;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   font-size: 16px;
   color: #f0f0f0;
@@ -109,7 +109,7 @@ body {
       width: 100%;
       height: 100%;
       z-index: -1;
-      background: rgba(36, 61, 68, 0.9); }
+      background: rgba(40, 56, 94, 0.9); }
 
 h1,
 h2,
@@ -123,8 +123,7 @@ h3 {
   h2.sm-heading,
   h3.sm-heading {
     font-size: 2rem;
-    padding-left: 1rem;
-    background: #2b4951; }
+    padding-left: 1rem; }
 
 header {
   position: fixed;
@@ -168,7 +167,7 @@ a {
     border: 3px solid #24b273; }
   .about-info .job {
     border-bottom: 3px solid #24b273;
-    background: #142226;
+    background: #1a253e;
     padding: 7px; }
   .about-info .about-img {
     grid-area: portrait; }
@@ -183,7 +182,7 @@ a {
 
 footer {
   text-align: center;
-  background: #142226;
+  background: #1a253e;
   height: 50px;
   padding: 1rem;
   font-size: 0.8rem; }
@@ -208,7 +207,7 @@ footer {
     background: black;
     color: #fff; }
   .projects .btn-light {
-    background: #9cc1cb;
+    background: #aab9db;
     color: #333; }
 
 .contact-info {
